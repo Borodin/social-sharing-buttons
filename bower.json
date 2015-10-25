@@ -1,0 +1,18 @@
+{
+  "name": "social-sharing-buttons",
+  "version": "0.0.1",
+  "license": "MIT",
+  "authors": [
+    "Maxim Borodin <borodinmk@gmail.com>"
+  ],
+  "main": [
+    "./social-sharing-buttons.js",
+    "./social-sharing-buttons.css"
+  ],
+  "keywords": [
+    "simple",
+    "social",
+    "sharing",
+    "buttons"
+  ]
+}
