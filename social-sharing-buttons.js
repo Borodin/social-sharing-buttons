@@ -168,7 +168,8 @@ SocialButtons.init = function() {
 		el.option = {
 			url: btns[i].getAttribute('data-url') || container.getAttribute('data-url') || window.location.href,
 			title: btns[i].getAttribute('data-title') || container.getAttribute('data-title') || document.title,
-			media: btns[i].getAttribute('data-media') || container.getAttribute('data-media') || ''
+			media: btns[i].getAttribute('data-media') || container.getAttribute('data-media') || '',
+			start: btns[i].getAttribute('data-start')
 		};
 
 		el.icon  = document.createElement('span');
@@ -191,8 +192,7 @@ SocialButtons.init = function() {
 		}.bind(el), false);
 
 		this.getCount(el, function(count) {
-			count = parseInt(count);
-
+			count = parseInt(count) || this.option.start;
 			if(count) {
 				this.count.innerText = count;
 			}else{
