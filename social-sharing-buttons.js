@@ -169,7 +169,7 @@ SocialButtons.init = function() {
 			url: btns[i].getAttribute('data-url') || container.getAttribute('data-url') || window.location.href,
 			title: btns[i].getAttribute('data-title') || container.getAttribute('data-title') || document.title,
 			media: btns[i].getAttribute('data-media') || container.getAttribute('data-media') || '',
-			start: btns[i].getAttribute('data-start')
+			start: btns[i].getAttribute('data-start') || 0
 		};
 
 		el.icon  = document.createElement('span');
