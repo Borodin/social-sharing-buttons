@@ -83,9 +83,9 @@ SocialButtons.JSONP = function(url, callback, error){
 	var scriptOk = false;
 
 	SocialButtons.CB['cb'+callbackName] = function(data) {
-	    scriptOk = true;
-	    delete SocialButtons.CB[callbackName]; 
-	    callback(data);
+		scriptOk = true;
+		delete SocialButtons.CB[callbackName]; 
+		callback(data);
 	};
 
 	var checkCallback = function() {
@@ -96,8 +96,8 @@ SocialButtons.JSONP = function(url, callback, error){
 
 	var script = document.createElement('script');
 	script.onload = script.onerror = checkCallback;
-  	script.src = SocialButtons.template(url, {cb: 'SocialButtons.CB.cb' + callbackName})+'&';
-  	document.body.appendChild(script);
+	script.src = SocialButtons.template(url, {cb: 'SocialButtons.CB.cb' + callbackName})+'&';
+	document.body.appendChild(script);
 };
 
 
@@ -143,9 +143,9 @@ SocialButtons.openPoup = function(url, opt){
 	var win = window.open(url, '-',
 		'left=' + left +
 		',top=' + top +
-	   	',width=' + opt.width +
-	   	',height=' + opt.height +
-	   	',personalbar=0,toolbar=0,scrollbars=1,resizable=1'
+		',width=' + opt.width +
+		',height=' + opt.height +
+		',personalbar=0,toolbar=0,scrollbars=1,resizable=1'
 	);
 
 	if (win) {
