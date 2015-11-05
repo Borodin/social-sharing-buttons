@@ -71,14 +71,14 @@ SocialButtons.services = {
 
 SocialButtons.CB = {};
 
-SocialButtons.JS = function(url){
+SocialButtons.JS = function(url) {
 	var script = document.createElement('script');
 	script.src = url;
 	document.body.appendChild(script);
 };
 
 
-SocialButtons.JSONP = function(url, callback, error){
+SocialButtons.JSONP = function(url, callback, error) {
 	var callbackName = String(Math.random()).slice(-6);
 	var scriptOk = false;
 
@@ -136,7 +136,7 @@ SocialButtons.template = function(str, obj) {
 	});
 };
 
-SocialButtons.openPoup = function(url, opt){
+SocialButtons.openPoup = function(url, opt) {
 	var left = Math.round(screen.width/2 - opt.width/2);
 	var top = screen.height > opt.height? Math.round(screen.height/3 - opt.height/2) : 0;
 
@@ -204,6 +204,10 @@ SocialButtons.init = function() {
 	}
 };
 
-window.addEventListener('DOMContentLoaded', function() {
+if(document.readyState=='complete') {
+	SocialButtons.init();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
 	SocialButtons.init();
 });
